@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "dev": "webpack --mode development ./rebelemail/frontend/src/index.js --output ./rebelemail/frontend/static/frontend/main.js",
-        "build": "webpack --mode production ./rebelemail/frontend/src/index.js --output ./rebelemail/frontend/static/frontend/main.js",
+        "build": "webpack --mode production ./rebelemail/frontend/src/index.js --output ./rebelemail/frontend/static/frontend/main.js"
     },
     "repository": {
         "type": "git",
