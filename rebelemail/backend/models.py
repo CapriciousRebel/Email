@@ -15,5 +15,5 @@ class Email(models.Model):
     #    default=2,
     #    on_delete=models.CASCADE)
     sender_name = models.CharField(max_length=520)
-    subject = models.TextField(blank=True)
-    body = models.TextField(blank=True)
+    subject = models.TextField(blank=False)
+    body = models.TextField(blank=False)

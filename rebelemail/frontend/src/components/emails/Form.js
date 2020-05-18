@@ -23,6 +23,11 @@ export class Form extends Component {
         const { sender_name, subject, body } = this.state;
         const email = { sender_name, subject, body };
         this.props.addEmail(email);
+        this.setState({
+            sender_name: '',
+            subject: '',
+            body: '',
+        })
     }
 
     render() {
