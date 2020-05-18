@@ -130,3 +130,6 @@ dmypy.json
 
 # Node Stuff
 node_modules
+
+# Extra folders
+myScripts

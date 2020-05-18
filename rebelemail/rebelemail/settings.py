@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'rebelemail.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'rebelemail',
+        'NAME': 'rebelemail2',
         'USER': 'postgres',
         'PASSWORD': 'Hl0olqwv',
         'HOST': 'localhost',
