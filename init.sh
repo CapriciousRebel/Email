@@ -7,7 +7,7 @@ source venv/bin/activate
 # Update pip
 pip install --upgrade pip
 # install dependencies for backend
-pip install requirements.txt
+pip install -r requirements.txt
 # Install frontend dependencies
 npm install
 # cd into rebelemail(management folder for the project)
