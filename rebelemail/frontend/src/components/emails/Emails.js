@@ -1,18 +1,26 @@
+// npm modules
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getEmails, deleteEmail } from '../../actions/emails'
 
+// actions
+import { getEmails, deleteEmail } from '../../actions/emails';
+
+// Email Component 
 export class Emails extends Component {
+
+    // Define propTypes
     static propTypes = {
         emails: PropTypes.array.isRequired,
         getEmails: PropTypes.func.isRequired
     }
 
+    // When component mounts onto the app
     componentDidMount() {
         this.props.getEmails();
     }
 
+    // render method
     render() {
         return (
             <>
@@ -50,9 +58,10 @@ export class Emails extends Component {
     }
 }
 
+// take global state, and map to to local props
 const mapStateToProps = state => ({
-    emails: state.emails.emails
     // prop: reducer.state
+    emails: state.emails.emails
 });
 
 export default connect(mapStateToProps, { getEmails, deleteEmail })(Emails);

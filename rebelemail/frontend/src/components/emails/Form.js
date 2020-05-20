@@ -1,19 +1,28 @@
+// npm modules
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+
+// actions
 import { addEmail } from '../../actions/emails'
 
+
+// Form Component
 export class Form extends Component {
+    
+    // Define propTypes
     static propTypes = {
         addEmail: PropTypes.func.isRequired
     }
 
+    // Define component level state
     state = {
         sender_name: '',
         subject: '',
         body: ''
     }
 
+    // Event listeners call actions on component events
     onChange = e => this.setState({
         [e.target.name]: e.target.value
     });
@@ -22,7 +31,10 @@ export class Form extends Component {
         e.preventDefault();
         const { sender_name, subject, body } = this.state;
         const email = { sender_name, subject, body };
+        
+        // call addEmail Action
         this.props.addEmail(email);
+        // Change the component level state
         this.setState({
             sender_name: '',
             subject: '',
@@ -30,6 +42,7 @@ export class Form extends Component {
         })
     }
 
+    // render method
     render() {
         const { sender_name, subject, body } = this.state;
         return (
@@ -79,11 +92,6 @@ export class Form extends Component {
 
 // Since we are only calling an action here, we dont need to bring the emails back in from the state
 // hence, mapStateToProps is not needed
-
-//const mapStateToProps = state => ({
-//emails: state.emails.emails
-// prop: reducer.state
-//});
 
 export default connect(null, { addEmail })(Form);
 

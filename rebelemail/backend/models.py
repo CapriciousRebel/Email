@@ -19,4 +19,4 @@ class Email(models.Model):
     subject = models.TextField(blank=False)
     body = models.TextField(blank=False)
     owner = models.ForeignKey(
-        User, related_name="leads", on_delete=models.CASCADE, null=True)
+        User, related_name="emails", on_delete=models.CASCADE, null=True)
