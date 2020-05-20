@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { createMessage } from './messages';
+import { createMessage, getErrors } from './messages';
 import { GET_EMAILS, DELETE_EMAIL, ADD_EMAIL, GET_ERRORS } from './types';
 
 // ADD EMAIL   
@@ -14,17 +14,10 @@ export const addEmail = (email) => dispatch => {
                 type: ADD_EMAIL,
                 payload: res.data
             });
-        }).catch(err => {
-            const errors = {
-                msg: err.response.data,
-                status: err.response.status
-            };
-
-            dispatch({
-                type: GET_ERRORS,
-                payload: errors,
-            });
-        });
+        }).catch(err => dispatch(getErrors(
+            err.response.data,
+            err.response.status
+        )));
 }
 
 
@@ -37,7 +30,10 @@ export const getEmails = () => dispatch => {
                 type: GET_EMAILS,
                 payload: res.data
             });
-        }).catch(err => console.log(err));
+        }).catch(err => dispatch(getErrors(
+            err.response.data,
+            err.response.status
+        )));
 }
 
 // DELETE EMAIL

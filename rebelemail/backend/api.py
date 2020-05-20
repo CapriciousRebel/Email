@@ -4,9 +4,14 @@ from .serializers import EmailSerializer
 
 
 class EmailViewSet(viewsets.ModelViewSet):
-    queryset = Email.objects.all()
     permission_classes = [
-        permissions.AllowAny
+        permissions.IsAuthenticated
     ]
 
     serializer_class = EmailSerializer
+
+    def get_queryset(self):
+        return self.request.user.emails.all()
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.owner)

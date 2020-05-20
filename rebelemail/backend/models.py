@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -17,3 +18,5 @@ class Email(models.Model):
     sender_name = models.CharField(max_length=520)
     subject = models.TextField(blank=False)
     body = models.TextField(blank=False)
+    owner = models.ForeignKey(
+        User, related_name="leads", on_delete=models.CASCADE, null=True)

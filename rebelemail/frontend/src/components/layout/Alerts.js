@@ -21,6 +21,9 @@ export class Alerts extends Component {
             if (error.msg.body) {
                 alert.error(`Body: ${error.msg.body.join()}`);
             }
+            if(error.msg.detail){
+                alert.error(`${error.msg.detail}`);
+            }
         }
 
         if (message !== prevProps.message) {
