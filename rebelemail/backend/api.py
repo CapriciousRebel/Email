@@ -1,5 +1,5 @@
 from rest_framework import viewsets, permissions
-from backend.models import Email
+from .models import Email
 from .serializers import EmailSerializer
 
 

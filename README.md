@@ -1,5 +1,3 @@
-# Email
-
 # IMPORTANT NOTE:
 
 Don't use this app to read your emails from Gmail or any other Email Service provider. <br/>
@@ -27,6 +25,8 @@ Don't use this app to read your emails from Gmail or any other Email Service pro
 - open this link                  : http://localhost:8000/
 
 
-### Figma Diagram on my understanding of how Redux Works
+### Figma Diagram for the Architecture used:
 
 [Redux by The Rebel](https://www.figma.com/file/uN9eWw4jM8sx3tpgqAljIk/Redux)
+
+

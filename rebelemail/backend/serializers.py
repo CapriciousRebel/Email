@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from backend.models import Email
+from .models import Email
 
 
 class EmailSerializer(serializers.ModelSerializer):
