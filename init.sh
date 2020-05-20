@@ -13,6 +13,6 @@ npm install
 # cd into rebelemail(management folder for the project)
 cd rebelemail
 # start the server
-python manage.oy runserver
+python manage.py runserver
 # open the project in browser
 open http://127.0.0.1:8000/
