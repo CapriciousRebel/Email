@@ -1,5 +1,7 @@
 # IMPORTANT NOTE:
 
+*This app does not work, it only exists as a reference*
+
 Don't use this app to read your emails from Gmail or any other Email Service provider. <br/>
 *This app is NOT Secure.* <br/>
 **No security measures were implemented**
